@@ -1,0 +1,3 @@
+"""
+Defense module
+"""

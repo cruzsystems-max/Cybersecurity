@@ -1,0 +1,143 @@
+# Scapy Framework Default Configuration
+# This file contains default settings for the framework
+# You can override these settings via command-line arguments
+
+# Network Configuration
+network:
+  # Default network interface (empty = auto-detect)
+  default_interface: ""
+
+  # Default timeout for network operations (seconds)
+  timeout: 2
+
+  # Number of retries for failed operations
+  retry: 3
+
+  # Verbose output
+  verbose: false
+
+# Scanner Configuration
+scanner:
+  # ARP scanner settings
+  arp_timeout: 1
+  arp_retry: 2
+
+  # TCP scanner settings
+  tcp_timeout: 0.5
+  tcp_retry: 1
+  max_threads: 100
+
+  # Host discovery settings
+  discovery_methods: ["arp", "icmp"]
+
+  # Port ranges
+  common_ports: [21, 22, 23, 25, 53, 80, 110, 143, 443, 445, 3306, 3389, 8080, 8443]
+
+# Analyzer Configuration
+analyzer:
+  # Packet sniffer settings
+  sniff_count: 100
+  sniff_timeout: 30
+  sniff_promisc: true
+
+  # Packet capture file settings
+  save_pcap: false
+  pcap_directory: "captures/"
+
+  # Filter settings
+  default_filter: ""
+
+# Attack Configuration (LABORATORY USE ONLY)
+attacks:
+  # Require user confirmation before executing attacks
+  require_confirmation: true
+
+  # ARP spoofing settings
+  arp_spoof_interval: 2
+  arp_spoof_restore_on_exit: true
+
+  # DNS spoofing settings
+  dns_spoof_port: 53
+
+  # Packet replay settings
+  replay_interval: 0.1
+
+# Defense Configuration
+defense:
+  # ARP detection settings
+  arp_monitor_interval: 5
+  arp_alert_threshold: 3
+
+  # Anomaly detection settings
+  anomaly_window: 60
+  anomaly_threshold: 100
+
+# Packet Crafter Configuration
+packet_crafter:
+  # Default TTL for crafted packets
+  default_ttl: 64
+
+  # Default protocol numbers
+  default_tcp_flags: "S"
+  default_window_size: 8192
+
+  # Fuzzer settings
+  fuzzer_iterations: 100
+  fuzzer_fields: ["ttl", "flags", "window"]
+
+# Logging Configuration
+logging:
+  # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+
+  # Log file path
+  file: "logs/scapy_framework.log"
+
+  # Maximum log file size (bytes)
+  max_bytes: 10485760  # 10 MB
+
+  # Number of backup files
+  backup_count: 5
+
+  # Log format
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+  # Date format
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+  # Console logging
+  console_enabled: true
+  console_level: "INFO"
+
+# Security Configuration
+security:
+  # Require confirmation for dangerous operations
+  require_confirmation: true
+
+  # Allowed network ranges for operations (CIDR notation)
+  # Empty list = no restrictions (NOT RECOMMENDED)
+  allowed_networks:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+
+  # Warn when operating on external networks
+  warn_external: true
+
+  # Maximum packet send rate (packets/second)
+  max_packet_rate: 1000
+
+# Output Configuration
+output:
+  # Output format: text, json, csv
+  format: "text"
+
+  # Colored output
+  colored: true
+
+  # Export results to file
+  export_enabled: false
+  export_directory: "output/"
+
+  # Timestamps in output
+  show_timestamps: true

@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "default": {
+      "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "detailed": {
+      "format": "%(asctime)s - %(name)s - %(levelname)s - [%(filename)s:%(lineno)d] - %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    },
+    "simple": {
+      "format": "%(levelname)s - %(message)s"
+    },
+    "json": {
+      "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
+      "format": "%(asctime)s %(name)s %(levelname)s %(message)s"
+    }
+  },
+  "handlers": {
+    "console": {
+      "class": "logging.StreamHandler",
+      "level": "INFO",
+      "formatter": "default",
+      "stream": "ext://sys.stdout"
+    },
+    "file": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "DEBUG",
+      "formatter": "detailed",
+      "filename": "logs/scapy_framework.log",
+      "maxBytes": 10485760,
+      "backupCount": 5,
+      "encoding": "utf-8"
+    },
+    "error_file": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "level": "ERROR",
+      "formatter": "detailed",
+      "filename": "logs/errors.log",
+      "maxBytes": 10485760,
+      "backupCount": 5,
+      "encoding": "utf-8"
+    }
+  },
+  "loggers": {
+    "scapy_framework": {
+      "level": "DEBUG",
+      "handlers": ["console", "file", "error_file"],
+      "propagate": false
+    },
+    "scapy_framework.scanner": {
+      "level": "DEBUG",
+      "handlers": ["console", "file"],
+      "propagate": false
+    },
+    "scapy_framework.analyzer": {
+      "level": "DEBUG",
+      "handlers": ["console", "file"],
+      "propagate": false
+    },
+    "scapy_framework.attacks": {
+      "level": "WARNING",
+      "handlers": ["console", "file", "error_file"],
+      "propagate": false
+    },
+    "scapy_framework.defense": {
+      "level": "INFO",
+      "handlers": ["console", "file"],
+      "propagate": false
+    }
+  },
+  "root": {
+    "level": "INFO",
+    "handlers": ["console", "file"]
+  }
+}
