@@ -34,21 +34,25 @@
 - ✅ icmp_crafter.py - Creación personalizada de paquetes ICMP
 - ✅ fuzzer.py - Fuzzing de paquetes
 
+### 7. Módulo Analyzer (scapy_framework/analyzer/)
+- ✅ sniffer.py - Captura de paquetes
+- ✅ packet_filter.py - Filtrado de paquetes
+
 ## 🚧 EN PROGRESO
 
-### Módulo Analyzer (scapy_framework/analyzer/)
+### Módulo Defense (scapy_framework/defense/)
 **SIGUIENTE PASO INMEDIATO:**
-- ⏳ sniffer.py - Captura de paquetes
-- ⏳ packet_filter.py - Filtrado de paquetes
+- ⏳ arp_detector.py - Detector de ARP spoofing (completar)
+- ⏳ anomaly_detector.py - Detector de anomalías
 
 ## 📋 PENDIENTE
 
-### 7. Módulo Defense (scapy_framework/defense/)
+### 8. Módulo Attacks (scapy_framework/attacks/)
 - ⏸ arp_detector.py - Detector de ARP spoofing
 - ⏸ anomaly_detector.py - Detector de anomalías
 
 ### 8. Módulo Attacks (scapy_framework/attacks/)
-- ⏸ arp_spoofing.py - Ataque ARP spoofing
+- ⏸ arp_spoofing.py - Ataque ARP spoofing (completar)
 - ⏸ dns_spoofing.py - Ataque DNS spoofing
 - ⏸ packet_replay.py - Replay de paquetes
 
@@ -81,7 +85,7 @@
 
 ### Comando para retomar:
 ```
-Continúa implementando el módulo analyzer desde sniffer.py
+Continúa completando el módulo defense desde arp_detector.py
 ```
 
 ### Contexto importante:
@@ -93,13 +97,14 @@ Continúa implementando el módulo analyzer desde sniffer.py
 ### Archivos clave para referencia:
 - `scapy_framework/scanner/tcp_scanner.py` - Ejemplo de implementación completa
 - `scapy_framework/packet_crafter/tcp_crafter.py` - Implementación completa de crafter
+- `scapy_framework/analyzer/sniffer.py` - Implementación completa de analyzer
 - `scapy_framework/utils/packet_utils.py` - Utilidades disponibles
 - `config/default_config.yaml` - Configuración del sistema
 
 ## 📊 Progreso General
-- **Completado:** ~45%
+- **Completado:** ~57%
 - **Módulos core:** 100%
-- **Módulos funcionales:** 4/7 (Scanner y Packet Crafter completos)
+- **Módulos funcionales:** 5/7 (Scanner, Packet Crafter y Analyzer completos)
 - **Infraestructura:** 80%
 
 ## 🔑 Notas Importantes
