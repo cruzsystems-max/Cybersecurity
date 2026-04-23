@@ -1,5 +1,5 @@
 # Estado del Proyecto Scapy Framework
-**Última actualización:** 2026-04-22
+**Última actualización:** 2026-04-23
 
 ## ✅ COMPLETADO
 
@@ -28,20 +28,20 @@
 - ✅ tcp_scanner.py - Escaneo TCP de puertos
 - ✅ host_discovery.py - Descubrimiento de hosts
 
+### 6. Módulo Packet Crafter (scapy_framework/packet_crafter/)
+- ✅ tcp_crafter.py - Creación personalizada de paquetes TCP
+- ✅ udp_crafter.py - Creación personalizada de paquetes UDP
+- ✅ icmp_crafter.py - Creación personalizada de paquetes ICMP
+- ✅ fuzzer.py - Fuzzing de paquetes
+
 ## 🚧 EN PROGRESO
 
-### Módulo Packet Crafter (scapy_framework/packet_crafter/)
+### Módulo Analyzer (scapy_framework/analyzer/)
 **SIGUIENTE PASO INMEDIATO:**
-- ⏳ tcp_crafter.py - Creación personalizada de paquetes TCP
-- ⏳ udp_crafter.py - Creación personalizada de paquetes UDP
-- ⏳ icmp_crafter.py - Creación personalizada de paquetes ICMP
-- ⏳ fuzzer.py - Fuzzing de paquetes
+- ⏳ sniffer.py - Captura de paquetes
+- ⏳ packet_filter.py - Filtrado de paquetes
 
 ## 📋 PENDIENTE
-
-### 6. Módulo Analyzer (scapy_framework/analyzer/)
-- ⏸ sniffer.py - Captura de paquetes
-- ⏸ packet_filter.py - Filtrado de paquetes
 
 ### 7. Módulo Defense (scapy_framework/defense/)
 - ⏸ arp_detector.py - Detector de ARP spoofing
@@ -81,7 +81,7 @@
 
 ### Comando para retomar:
 ```
-Continúa implementando el módulo packet_crafter desde tcp_crafter.py
+Continúa implementando el módulo analyzer desde sniffer.py
 ```
 
 ### Contexto importante:
@@ -92,13 +92,14 @@ Continúa implementando el módulo packet_crafter desde tcp_crafter.py
 
 ### Archivos clave para referencia:
 - `scapy_framework/scanner/tcp_scanner.py` - Ejemplo de implementación completa
+- `scapy_framework/packet_crafter/tcp_crafter.py` - Implementación completa de crafter
 - `scapy_framework/utils/packet_utils.py` - Utilidades disponibles
 - `config/default_config.yaml` - Configuración del sistema
 
 ## 📊 Progreso General
-- **Completado:** ~35%
+- **Completado:** ~45%
 - **Módulos core:** 100%
-- **Módulos funcionales:** 3/7 (Scanner completo)
+- **Módulos funcionales:** 4/7 (Scanner y Packet Crafter completos)
 - **Infraestructura:** 80%
 
 ## 🔑 Notas Importantes
