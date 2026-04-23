@@ -45,16 +45,12 @@
 - ⏳ arp_detector.py - Detector de ARP spoofing (completar)
 - ⏳ anomaly_detector.py - Detector de anomalías
 
+### 8. Módulo Attacks (scapy_framework/attacks/)
+- ✅ arp_spoofing.py - Ataque ARP spoofing
+- ✅ dns_spoofing.py - Ataque DNS spoofing
+- ✅ packet_replay.py - Replay de paquetes
+
 ## 📋 PENDIENTE
-
-### 8. Módulo Attacks (scapy_framework/attacks/)
-- ⏸ arp_detector.py - Detector de ARP spoofing
-- ⏸ anomaly_detector.py - Detector de anomalías
-
-### 8. Módulo Attacks (scapy_framework/attacks/)
-- ⏸ arp_spoofing.py - Ataque ARP spoofing (completar)
-- ⏸ dns_spoofing.py - Ataque DNS spoofing
-- ⏸ packet_replay.py - Replay de paquetes
 
 ### 9. CLI (cli/)
 - ⏸ main.py - Punto de entrada principal
@@ -85,7 +81,7 @@
 
 ### Comando para retomar:
 ```
-Continúa completando el módulo defense desde arp_detector.py
+Continúa completando el módulo defense desde arp_detector.py y anomaly_detector.py
 ```
 
 ### Contexto importante:
@@ -93,18 +89,20 @@ Continúa completando el módulo defense desde arp_detector.py
 2. **Dependencias principales:** scapy, pyyaml, tabulate
 3. **Ubicación:** C:\Users\Cristian\OneDrive\ESPECIALIZACION\PROGRAMACION\Cybersecurity\Scapy\
 4. **Estilo de código:** Type hints, docstrings detallados, manejo robusto de errores
+5. **Advertencias éticas:** Todos los módulos de ataque incluyen advertencias prominentes
 
 ### Archivos clave para referencia:
 - `scapy_framework/scanner/tcp_scanner.py` - Ejemplo de implementación completa
 - `scapy_framework/packet_crafter/tcp_crafter.py` - Implementación completa de crafter
 - `scapy_framework/analyzer/sniffer.py` - Implementación completa de analyzer
+- `scapy_framework/attacks/arp_spoofing.py` - Implementación completa de attack
 - `scapy_framework/utils/packet_utils.py` - Utilidades disponibles
 - `config/default_config.yaml` - Configuración del sistema
 
 ## 📊 Progreso General
-- **Completado:** ~57%
+- **Completado:** ~71%
 - **Módulos core:** 100%
-- **Módulos funcionales:** 5/7 (Scanner, Packet Crafter y Analyzer completos)
+- **Módulos funcionales:** 6/7 (Solo falta Defense)
 - **Infraestructura:** 80%
 
 ## 🔑 Notas Importantes
